@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "embeddings-lab"
+version = "0.1.0"
+description = "Reproducible NLP and word embeddings experiments"
+requires-python = ">=3.11"
+dependencies = [
+    "datasets>=4.0",
+    "gensim>=4.3",
+    "matplotlib>=3.9",
+    "nltk>=3.9",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "psutil>=6.0",
+    "scikit-learn>=1.5",
+    "torch>=2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.1",
+    "nbclient>=0.10",
+    "nbformat>=5.10",
+    "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q --basetemp=.pytest_tmp"
+pythonpath = ["src"]
+testpaths = ["tests"]

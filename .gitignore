@@ -1,0 +1,23 @@
+# Artefactos pesados o regenerables
+/data/
+/datasets/
+/checkpoints/
+/artifacts/
+*.pt
+*.pth
+*.ckpt
+*.kv
+*.vec
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_tmp/
+.pytest_cache/
+.ship-safe/
+
+# Entornos y configuración local
+.venv/
+venv/
+.env
